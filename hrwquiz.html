@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang ="de">
+<head>
+<meta charset="utf-8">
+<title> Vierte Seite</title>
+<body>
+<div class = "all">
+
+<button id="button1" onclick="myFunction()" >Klicken, um die Farbe auf rot zu ändern</button>
+<p> <button id="button2" onclick="myFunction1()" >Undo</button> </p>
+ <input type="text" id="field1" value="Hello World!"><br>
+ <input type="text" id="field2"><br><br>
+ <button onclick = "copyText()"> text kopieren </button>
+
+<script>
+function myFunction(){
+document.getElementById("button1").style.color = "red";
+document.getElementById("button2").style.color = "red";
+}
+
+function myFunction1(){
+document.getElementById("button1").style.color = "black";
+document.getElementById("button2").style.color = "black";
+}
+
+function copyText(){
+document.getElementById("field2").value = document.getElementById("field1").value;
+}
+ window.onclick = changeColor;
+ 
+ function changeColor (){
+
+    document.getElementsByTagName("BODY")[0].style.backgroundColor = "lightblue";
+ }
+</script>
+
+</div>
+</body>
+</div>
+</html>
